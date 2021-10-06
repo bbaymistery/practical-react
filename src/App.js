@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useFetch } from "./useFetch";
 import Follower from "./Follower";
 
-import Paginate from "./utils";
+import Paginate from "./Utils";
 function App() {
   const { loading, data } = useFetch();
 
