@@ -1,0 +1,56 @@
+body {
+  height: 100vh;
+  background-color: gray;
+  display: grid;
+  place-items: center;
+}
+
+main {
+}
+
+.markdown {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+}
+.markdown .input {
+  padding: 1rem;
+  outline: none;
+  border: none;
+  height: 450px;
+  width: 550px;
+  font-size: 28px;
+  font-weight: 500;
+  background-color: rgb(218, 1, 55);
+  color: black;
+  resize: none;
+}
+
+.markdown .result {
+  resize: none;
+
+  padding: 1rem;
+  font-size: 28px;
+  line-height: 1.1;
+  color: red;
+  background-color: rgb(29, 28, 28);
+  letter-spacing: 5px;
+}
+@media screen and (max-width: 1214px) {
+  .markdown .input {
+    height: 350px;
+    width: 350px;
+  }
+  body {
+  }
+}
+
+@media screen and (max-width: 996px) {
+  .markdown {
+    grid-template-columns: 1fr;
+  }
+  .markdown .result {
+    height: 350px;
+    width: 350px;
+  }
+}
