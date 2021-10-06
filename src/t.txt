@@ -1,2 +1,0 @@
-package jsona  build yerine bunu ekledik
-    "build": "CI= react-scripts build",
