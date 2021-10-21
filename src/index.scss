@@ -1,0 +1,105 @@
+@import './global.scss';
+
+body {
+    height: 100vh;
+    @include flex-display(flex, center, flex-start);
+    background-color: $mainGrey;
+    color: $mainWhite;
+}
+
+h1 {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem 0rem;
+}
+
+.container {
+    padding: 1rem;
+    max-width: 750px;
+    margin: 0 auto;
+    border: 2px solid green;
+    background-color: rgb(255, 255, 255);
+    @include flex;
+    flex-direction: column;
+
+    .form-center {
+        width: 700px;
+        display: flex;
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+
+            label {
+                margin-left: 5px;
+
+                display: block;
+                color: $mainGrey;
+                font-size: 1rem;
+                text-transform: capitalize
+            }
+
+            input {
+                margin-left: 5px;
+                border: none;
+                padding: 1rem 0rem;
+                outline: none;
+                font-size: 1rem;
+                border-bottom: 1px solid $mainGrey;
+            }
+        }
+    }
+
+    .list {
+        margin-top: 10px;
+
+        div {
+            display: flex;
+            width: 500px;
+            // background-color: blue;
+            color: $mainGrey;
+            border: 1px solid $mainBlack;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 11px;
+
+            .name {
+                color: $mainBlack;
+            }
+
+            .fiyat {
+                background-color: $primaryColor;
+                padding: 5px;
+                border-radius: 3px;
+                color: $mainWhite;
+            }
+
+            .icons {
+                @include flex;
+                cursor: pointer;
+                padding: 5px;
+                color: $mainRed;
+
+
+
+
+            }
+        }
+
+    }
+}
+
+.btn {
+    text-decoration: none;
+    cursor: pointer;
+    border: 0;
+    border-radius: 4px;
+    transition: all 0.3s linear;
+    font-size: 18px;
+    margin: 1rem 0rem;
+    background-color: $primaryColor;
+    color: $mainWhite;
+    padding: 5px 7px;
+}

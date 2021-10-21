@@ -1,0 +1,43 @@
+$primaryColor: #f15025;
+$mainWhite: #fff;
+$mainBlack: #222;
+$mainGrey: #9e9e9e;
+$mainRed: #d50000;
+$mainGreen: #4caf50;
+
+@mixin flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-display($display, $justify-content, $align-items) {
+    /*
+    @include flex-display(flex, space-between, center);
+    */
+    display: $display;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+
+//breakpoints
+// 640px, 1024px, 1400px
+$breakpoints-up: ("medium": "40em", "large": "64em", "xlarge": "87.5em");
+// 639px, 1023px, 1399px
+$breakpoints-down: ("small": "39.9375em", "medium": "63.9375em", "large": "87.4375em");
+
+
+@mixin breakpoint-up($size) {
+    @media (min-width: map-get($breakpoints-up, $size)) {
+        @content;
+    }
+}
+
+@mixin breakpoint-down($size) {
+    @media (max-width: map-get($breakpoints-down, $size)) {
+        @content;
+    }
+}
+
+//components
