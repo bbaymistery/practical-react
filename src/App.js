@@ -18,7 +18,7 @@ function App() {
 
       {list.length > 0 ? (
         <h1>
-          Total Spending <span className="btn">{total}</span>
+          Total Spending <span className="btn">{total} $ </span>
         </h1>
       ) : (
         ""
