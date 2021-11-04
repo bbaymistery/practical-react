@@ -1,8 +1,0 @@
-utils   uygulama geneli kullanilan fonksyonlar icindir
-
-
-//routeri kullanmak icin bunu yazdik
-npm i @types/react-router-dom
-
-//axiosuda yukledik
-npm i axios
