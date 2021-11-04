@@ -1,0 +1,80 @@
+@import '../../global.scss';
+
+.card {
+    justify-self: center;
+    text-align: center;
+    width: 210px;
+    height: 300px;
+    // border: 2px solid rgb(216, 10, 10);
+    position: relative;
+    padding: 10px;
+    background-color: #282c34;
+    transition: 0.5s ease-in-out;
+    margin-top: .65rem;
+
+    @include breakpoint-down(medium) {
+        width: 180px;
+        height: 250px;
+    }
+
+    &:hover {
+        cursor: pointer;
+        background-color: rgb(15, 10, 6);
+        transform: scale(0.95);
+    }
+
+    img {
+
+        border-radius: 20px;
+        height: 70%;
+        object-fit: cover;
+        width: 60%;
+
+        @include breakpoint-down(medium) {
+            object-fit: scale-down;
+            height: 70%;
+
+        }
+    }
+
+    .card-body {
+
+        h3 {
+            padding: 5px 0px;
+            color: white;
+
+            @include breakpoint-down(medium) {
+                font-size: 1rem;
+            }
+        }
+
+        .score {
+            position: absolute;
+            color: rgb(219, 219, 255);
+            font-size: 1.1rem;
+            background-color: rgb(56, 56, 255) !important;
+            font-weight: bold;
+            border-radius: 20px;
+            padding: 2px 5px;
+            top: -15px;
+            right: -15px;
+
+            @include breakpoint-down(medium) {
+                font-size: .8rem;
+            }
+
+        }
+
+        .desc {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1rem;
+            color: wheat;
+            font-weight: normal;
+
+            @include breakpoint-down(medium) {
+                font-size: .8rem;
+            }
+        }
+    }
+}

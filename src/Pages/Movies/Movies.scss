@@ -1,0 +1,128 @@
+@import '../../global.scss';
+
+.content {
+    .container {
+
+        .types-of-movies {
+
+            // when it s active
+            // border: 1px solid red;
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            flex-wrap: wrap;
+            padding: 10px 0px;
+
+            @include breakpoint-down(medium) {
+                border: none;
+                grid-template-columns: repeat(4, 1fr);
+                padding: 5px 0;
+
+            }
+
+            .btn-type {
+                margin: 5px 0px;
+                padding: 8px 9px;
+                border-radius: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                cursor: pointer;
+                background-color: rgb(114, 114, 114);
+                color: white;
+                font-weight: bold;
+                letter-spacing: 1px;
+                transition: .5s ease;
+                margin-right: 10px;
+
+                @include breakpoint-down(medium) {
+                    padding: 5px 19px;
+                    font-size: 0.7rem;
+                }
+
+
+                &:hover {
+                    color: rgb(29, 29, 129);
+                    background-color: rgb(255, 255, 255);
+                    transform: scale(0.95);
+
+                }
+
+                .icon {
+                    display: none;
+                }
+            }
+
+            .active {
+                background-color: white;
+                color: rgb(114, 114, 114);
+                ;
+
+                // display: none;
+                .icon {
+                    display: block;
+                    font-size: 1rem;
+                    margin-left: .5rem;
+                    background-color: rgb(26, 27, 27);
+                    color: rgba(255, 255, 255, 0.685);
+                    border-radius: 50%;
+                    padding: 6px;
+                    font-size: 0.7rem;
+
+                    &:hover {
+                        background-color: rgb(238, 0, 0);
+                        color: rgba(255, 255, 255, 0.685);
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+    }
+
+
+    //for custom pagination
+    div {
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-top: 3rem;
+
+            ul {
+                li {
+                    transition: ease-in-out;
+                }
+
+                li:hover {
+                    color: honeydew !important;
+                    transform: scale(.90);
+                    transition: 200ms ease-in-out;
+
+                    button {
+                        background-color: #101218;
+
+                        color: white;
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+
+
+/*
+                // padding: 5px 9px;
+                // color: red;
+                // border-radius: 20px;
+                // display: flex;
+                // align-items: center;
+                // justify-content: space-between;
+                // cursor: pointer;
+                // background-color: rgb(114, 114, 114);
+                // color: white;
+                // font-weight: bold;
+                // letter-spacing: 1px;
+                // transition: .5s ease;
+                // margin-right: 5px;
+
+*/
