@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Search.scss";
+
+//components
 import SingleContent from "../../Components/SingleContent/SingleContent";
 import CustomPagination from "../../Components/Pagination/CustomPagination";
 import Modal from "../../Components/Modal/Modal";
@@ -66,7 +68,7 @@ const Searchh = () => {
     setIdForModal(finalResult);
   };
 
-  //active btn arrangements
+  //active btn arrangements(when we click to buttons)
   //
   const setActiveClassAndTakeValue = (e) => {
     //for movie series

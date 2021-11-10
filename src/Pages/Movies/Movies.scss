@@ -3,6 +3,8 @@
 .content {
     .container {
 
+
+        //for buttons which come up
         .types-of-movies {
 
             // when it s active
@@ -16,6 +18,11 @@
                 border: none;
                 grid-template-columns: repeat(4, 1fr);
                 padding: 5px 0;
+
+            }
+
+            @include breakpoint-down(small) {
+                grid-template-columns: repeat(3, 1fr);
 
             }
 
@@ -39,6 +46,9 @@
                     font-size: 0.7rem;
                 }
 
+                @include breakpoint-down(small) {
+                    padding: 4px 10px;
+                }
 
                 &:hover {
                     color: rgb(29, 29, 129);
@@ -107,22 +117,3 @@
         }
     }
 }
-
-
-
-/*
-                // padding: 5px 9px;
-                // color: red;
-                // border-radius: 20px;
-                // display: flex;
-                // align-items: center;
-                // justify-content: space-between;
-                // cursor: pointer;
-                // background-color: rgb(114, 114, 114);
-                // color: white;
-                // font-weight: bold;
-                // letter-spacing: 1px;
-                // transition: .5s ease;
-                // margin-right: 5px;
-
-*/

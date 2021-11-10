@@ -10,7 +10,7 @@ import SingleContent from "../../Components/SingleContent/SingleContent";
 //animation importing
 import AOS from "aos";
 import "aos/dist/aos.css";
-//
+
 const Trending = () => {
   //useStates
   const [data, setData] = useState([]);
@@ -37,6 +37,7 @@ const Trending = () => {
     }
   };
 
+  //useeffect for getting movies
   useEffect(() => {
     window.scroll({
       top: 0,
@@ -46,7 +47,7 @@ const Trending = () => {
     getTrendingMovies(MainAdress);
   }, [pageNumber]);
 
-  // //for hiding scrool on dody
+  // //for hiding scrool on body whenver modal is open
   useEffect(() => {
     if (showModal) {
       document.querySelector("body").classList.add("body");
@@ -55,9 +56,9 @@ const Trending = () => {
     }
   }, [showModal]);
 
-  //
+  //bringing id and media type via this function
   const getIdForCarousel = (id, media_type) => {
-    // bunu ilk single gonderdik id alsin diye ordan idni alib  idFormodala atb ordan  idfor modali gonderirik ki modal ile id regiust elesin
+    // bunu ilk singleContente gonderdik id alsin diye ordan idni alib  idFormodala atb ordan  idfor modali gonderirik ki modal ile id regiust elesin
     let finalResult = { id, media_type };
     setIdForModal(finalResult);
   };
@@ -66,11 +67,9 @@ const Trending = () => {
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
+
   return (
     <div className="content">
-      {/* <h1 className="welcome">
-        <span>I</span>M<span>POSSIBLE</span>
-      </h1> */}
       <div className="wrapper">
         <span>W</span>
         <span>E</span>
@@ -117,7 +116,6 @@ const Trending = () => {
       ) : null}
     </div>
   );
-  // }
 };
 
 export default Trending;

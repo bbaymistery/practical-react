@@ -28,7 +28,6 @@
         top: 60px;
     }
 
-    // @include breakpoint-down()
     .text-center {
         font-size: 2rem;
         color: bisque;
@@ -48,9 +47,16 @@
             grid-template-columns: 1fr 1fr 1fr 1fr;
 
             @include breakpoint-down(medium) {
-                grid-template-columns: 1fr 1fr
+                grid-template-columns: 1fr 1fr;
+                // display: none;
             }
 
+            @include breakpoint-down(small) {
+                grid-template-columns: 1fr;
+                // background-color: blue;
+            }
+
+            //css code  which belong for each card transfered to single content which contains each card
             /*
             .card {
                 justify-self: center;
@@ -127,7 +133,7 @@
 }
 
 
-
+//we have two paginations first i created by my own ,other one which i created by material icons(customPagination)
 /*
   .pagination {
       text-align: center;

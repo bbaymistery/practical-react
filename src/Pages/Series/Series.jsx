@@ -38,7 +38,7 @@ const Movies = () => {
     setData(data.results);
     setNumOfPages(data.total_pages);
   };
-  //fetching movies
+  //UseEffect for fetching movies
   useEffect(() => {
     window.scroll({
       top: 0,
@@ -134,13 +134,3 @@ const Movies = () => {
 };
 
 export default Movies;
-// {
-/* <button className="btn-type active">
-              Animation
-              <CloseRounded className="icon" />
-            </button>{" "}
-            <button className="btn-type">
-              Animation
-              <CloseRounded className="icon" />
-            </button> */
-// }

@@ -1,13 +1,8 @@
 import React, { useEffect, useState } from "react";
-
 import { img_300, unavailable } from "../../config/config";
 import "./SingleContent.scss";
-//animation importing
-import AOS from "aos";
-import "aos/dist/aos.css";
-import Loading from "../Loading/Loading";
+
 const SingleContent = ({
-  pageNumber,
   getIdForCarousel,
   showModal,
   setShowModal,
@@ -18,13 +13,9 @@ const SingleContent = ({
   media_type,
   vote_average,
 }) => {
-  const [loading, setLoading] = useState(true);
-
   return (
     <>
       <div
-        // data-aos="fade-up"
-        // data-aos-easing="linear"
         className="card"
         key={id}
         onClick={() => {
@@ -50,7 +41,6 @@ const SingleContent = ({
           </div>
         </div>
       </div>
-      {/* Modal content */}
     </>
   );
 };

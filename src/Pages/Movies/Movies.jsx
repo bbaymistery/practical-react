@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Movies.scss";
-//npmss
 import axios from "axios";
+
 //hooks
 import useGenre from "../../hooks/useGenre";
 
@@ -9,7 +9,6 @@ import useGenre from "../../hooks/useGenre";
 import Modal from "../../Components/Modal/Modal";
 import SingleContent from "../../Components/SingleContent/SingleContent";
 import CustomPagination from "../../Components/Pagination/CustomPagination";
-
 import Genres from "../../Components/Genres/Genres";
 //
 //animation importing
@@ -29,7 +28,7 @@ const Movies = () => {
   //genres ssadece type yazmag ucundur
   const [genres, setGenres] = useState([]);
 
-  //selected genresi usegenres ile gondewrib id sini airix
+  //selected genresi usegenres ile gondewrib id sini aliriyoruz
   const [selectedGenres, setSelectedGenres] = useState([]);
   const genreforURL = useGenre(selectedGenres); //bura atanan deger le tezden fetch etmis olurux
 
@@ -42,7 +41,7 @@ const Movies = () => {
     setNumOfPages(data.total_pages);
   };
 
-  //fetching movies
+  //useEffect for fetching movies
   useEffect(() => {
     window.scroll({
       top: 0,

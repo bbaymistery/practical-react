@@ -1,3 +1,6 @@
+import React, { useState, useEffect } from "react";
+
+//material icons
 import { makeStyles } from "@material-ui/core/styles";
 import BottomNavigation from "@material-ui/core/BottomNavigation";
 import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
@@ -6,11 +9,6 @@ import MovieIcon from "@material-ui/icons/Movie";
 import SearchIcon from "@material-ui/icons/Search";
 import WhatshotIcon from "@material-ui/icons/Whatshot";
 import { useHistory } from "react-router-dom";
-import Loading from "./Loading/Loading";
-import React, { useState, useEffect } from "react";
-
-//scrool icon
-// import { ArrowUpwardSharp } from "@material-ui/icons";
 
 const useStyles = makeStyles({
   root: {
@@ -26,10 +24,7 @@ const MainNav = () => {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
   const history = useHistory();
-  // const [loading, setLoading] = useState(true);
   useEffect(() => {
-    // setLoading(true);
-    // console.log(loading);
     if (value === 0) {
       history.push("/");
     } else if (value === 1) {
@@ -39,11 +34,8 @@ const MainNav = () => {
     } else if (value === 3) {
       history.push("/search");
     }
-    // setLoading(false);
   }, [value, history]);
-  // if (loading) {
-  //   return <Loading />;
-  // }
+
   return (
     <>
       <BottomNavigation

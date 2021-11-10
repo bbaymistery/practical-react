@@ -1,4 +1,3 @@
-import React from "react";
 import Pagination from "@material-ui/lab/Pagination";
 const CustomPagination = ({ setPageNumber, numOfPages }) => {
   const handlePageChange = (page) => {

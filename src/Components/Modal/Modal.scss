@@ -15,7 +15,7 @@ $wh:rgb(235, 226, 226);
     transition: .5s ease-out;
 
 
-
+    //modalin icindeki cerceve
     .fixed {
         position: fixed;
         width: 850px;
@@ -42,6 +42,12 @@ $wh:rgb(235, 226, 226);
             }
         }
 
+        @include breakpoint-down(small) {
+            width: 350px;
+            min-height: 450px;
+        }
+
+        //modalin icerisindeki resim kismi
         .left {
             flex: 1;
             display: flex;
@@ -78,7 +84,14 @@ $wh:rgb(235, 226, 226);
 
             }
 
+
+            //alice carousel Carouseli  ekledikden sonra carousel icinde gelen class Bunu yazmamin sebebi carousein icerigini ayarlamamm
             .alice-carousel {
+                // @include breakpoint-down(small) {
+
+                //     display: none;
+                // }
+
                 div {
 
                     .alice-carousel__stage-item {
@@ -173,7 +186,9 @@ $wh:rgb(235, 226, 226);
                 border-bottom-right-radius: 20px;
                 border-bottom-left-radius: 20px;
 
-                @include breakpoint-down(medium) {}
+                @include breakpoint-down(small) {
+                    display: none;
+                }
 
                 .carouselItem {
                     // border: 1px solid black;
@@ -223,9 +238,10 @@ $wh:rgb(235, 226, 226);
                 }
 
                 @include breakpoint-down(medium) {
-                    width: 40%;
+                    width: 50%;
                     margin-bottom: 1rem;
                 }
+
 
                 &:hover {
                     background-color: #b92d5e;

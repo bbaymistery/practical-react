@@ -5,6 +5,7 @@ import "react-alice-carousel/lib/alice-carousel.css";
 import { img_300, noPicture } from "../../config/config";
 const handleDragStart = (e) => e.preventDefault();
 
+//in a small size we arranged carouesels to display none it is located inside modal
 const Carousel = ({ id, media_type }) => {
   const [credits, setCredits] = useState([]);
 
@@ -58,16 +59,3 @@ const Carousel = ({ id, media_type }) => {
 };
 
 export default Carousel;
-// {
-//   /* {credits.map((c) => (
-//         <div className="carouselItem">
-//           <img
-//             src={c.profile_path ? `${img_300}/${c.profile_path}` : noPicture}
-//             alt={c?.name}
-//             onDragStart={handleDragStart}
-//             className="carouselItem__img"
-//           />
-//           <b className="carouselItem__txt">{c?.name}</b>
-//         </div>
-//       ))} */
-// }

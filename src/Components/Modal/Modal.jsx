@@ -1,17 +1,22 @@
 import "./Modal.scss";
 import axios from "axios";
-import img from "../../img/img.jpg";
+import React, { useState, useEffect } from "react";
+
+//material icons
 import YouTubeIcon from "@material-ui/icons/YouTube";
 import Carousel from "../Carousel/Carousel";
-import React, { useState, useEffect } from "react";
 import { CloseSharp } from "@material-ui/icons";
+
+//configauratins
 import {
   img_500,
   unavailable,
   unavailableLandscape,
 } from "../../config/config";
+//components
+
 import Loading from "../Loading/Loading";
-//
+
 //animation importing
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -20,7 +25,7 @@ const Modal = ({ showModal, setShowModal, idForModal }) => {
   const [content, setContent] = useState();
   const [video, setVideo] = useState();
   const [loading, setLoading] = useState(true);
-  console.log(idForModal);
+  // console.log(idForModal);
   //
   const fetchData = async () => {
     setLoading(true);
@@ -49,7 +54,7 @@ const Modal = ({ showModal, setShowModal, idForModal }) => {
     }, 5100);
   };
 
-  //
+  //useEffect for  calling fetchData fetchVideo functions
   useEffect(() => {
     fetchData();
     fetchVideo();
@@ -106,7 +111,7 @@ const Modal = ({ showModal, setShowModal, idForModal }) => {
             >
               <YouTubeIcon />
 
-              <h3> Watch The Trailer</h3>
+              <h3> The Trailer</h3>
             </a>
           </div>
         </div>
@@ -116,19 +121,3 @@ const Modal = ({ showModal, setShowModal, idForModal }) => {
 };
 
 export default Modal;
-/*
-  const fetchData = async () => {
-    const { data } = await axios.get(
-      `https://api.themoviedb.org/3/${media_type}/${id}?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`
-    );
-
-    setContent(data);
-    // console.log(data);
-  };
-
-  const fetchVideo = async () => {
-    const { data } = await axios.get(
-      `https://api.themoviedb.org/3/${media_type}/${id}/videos?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`
-    );
-
-*/

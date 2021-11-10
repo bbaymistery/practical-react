@@ -1,5 +1,6 @@
-import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+//components
 import Header from "./Components/Header/Header";
 import MainNav from "./Components/MainNav";
 

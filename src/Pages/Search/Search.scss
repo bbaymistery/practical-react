@@ -1,3 +1,5 @@
+@import '../../global.scss';
+
 .content {
     .container {
 
@@ -16,7 +18,9 @@
                 border-bottom: 1px solid rgb(0, 0, 0);
                 border-left: 2px solid black;
 
-                &:hover {}
+                @include breakpoint-down(small) {
+                    width: 350px;
+                }
 
                 &:focus {
                     background-color: rgba(245, 222, 179, 0.062);
