@@ -1,0 +1,271 @@
+@import '../../global.scss';
+$bg:#39445a;
+$yt:#f50057;
+$wh:rgb(235, 226, 226);
+
+.modal {
+    background-color: rgba(15, 15, 15, 0.4);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s ease-out;
+
+
+    //modalin icindeki cerceve
+    .fixed {
+        position: fixed;
+        width: 850px;
+        height: 450px;
+        // border: 5px solid black;
+        background-color: $bg;
+        padding: 1rem 1rem;
+        border-radius: 20px;
+        top: 60%;
+        transform: translateY(-60%);
+        display: flex;
+
+        @include breakpoint-down(medium) {
+            display: flex;
+            flex-direction: column;
+            width: 550px;
+            min-height: 600px;
+            padding: 0;
+            overflow-y: auto;
+
+            &::-webkit-scrollbar {
+                //for chorem
+                display: none;
+            }
+        }
+
+        @include breakpoint-down(small) {
+            width: 350px;
+            min-height: 450px;
+        }
+
+        //modalin icerisindeki resim kismi
+        .left {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+
+            img {
+                width: 65%;
+                height: 65%;
+                object-fit: cover;
+
+                @include breakpoint-down(medium) {
+                    height: 150px;
+                    object-fit: contain;
+                    border-bottom-right-radius: 20px;
+                    border-bottom-left-radius: 20px;
+                }
+            }
+        }
+
+        .right {
+            color: white;
+            flex: 1.5;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            // border: 2px solid yellow;
+            width: 50%;
+
+            @include breakpoint-down(medium) {
+                width: auto;
+
+            }
+
+
+            //alice carousel Carouseli  ekledikden sonra carousel icinde gelen class Bunu yazmamin sebebi carousein icerigini ayarlamamm
+            .alice-carousel {
+                // @include breakpoint-down(small) {
+
+                //     display: none;
+                // }
+
+                div {
+
+                    .alice-carousel__stage-item {
+                        margin-right: .5rem;
+                        text-align: center;
+
+                        @include breakpoint-down(medium) {
+                            margin-right: 2.2rem;
+                        }
+                    }
+                }
+            }
+
+            .closeBtn {
+                display: none;
+
+                &:hover {
+                    transform: translateY(-65%);
+                }
+
+                @include breakpoint-down(medium) {
+                    position: absolute;
+                    right: 50px;
+                    top: 5%;
+                    transform: translateY(-50%);
+                    transition: 0.2s linear;
+                    cursor: pointer;
+                    color: white;
+
+                    &:hover {
+                        transform: translateY(-65%);
+                    }
+                }
+            }
+
+            &-title {
+                text-align: center;
+                width: 100%;
+                margin-bottom: 2rem;
+                letter-spacing: 5px;
+                font-size: .8rem;
+
+                @include breakpoint-down(medium) {
+                    font-size: .5rem;
+                    letter-spacing: 6px;
+                    margin-bottom: 1rem;
+
+
+                }
+            }
+
+            &-desc {
+                height: 30%;
+                width: 400px;
+                letter-spacing: 3.5px;
+                overflow: auto;
+                scroll-snap-type: none;
+                padding: 1.5rem;
+                border-radius: 20px;
+                text-align: justify;
+                font-weight: 100;
+                font-size: .8rem;
+
+                &::-webkit-scrollbar {
+                    //for chorem
+                    display: none;
+                }
+
+                /* offset-x | offset-y | blur-radius | color | inside */
+                box-shadow: 0px 1px 3px gray inset;
+                margin-bottom: 1rem;
+
+                @include breakpoint-down(medium) {
+                    width: 300px;
+                    box-shadow: none;
+                    padding: 0rem;
+                    border-radius: 0px;
+
+
+                }
+            }
+
+            &-carousel {
+                min-height: 35%;
+                overflow: hidden;
+                width: 85%;
+                padding: 10px 0px;
+                display: flex;
+                padding: 1rem 0rem;
+                box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+                    rgba(0, 0, 0, 0.22) 0px 15px 12px;
+                border-bottom-right-radius: 20px;
+                border-bottom-left-radius: 20px;
+
+                @include breakpoint-down(small) {
+                    display: none;
+                }
+
+                .carouselItem {
+                    // border: 1px solid black;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    // margin-right: 1rem;
+                    // margin-top: 1rem;/
+
+                    img {
+                        box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+                            rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+                            rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+                        border-radius: 20px;
+                        width: 50px;
+
+
+                    }
+
+                    .carouselItem__txt {
+                        margin-top: 1rem;
+                        font-weight: 200;
+                        font-size: 0.6rem;
+                    }
+                }
+            }
+
+            .btn {
+                background-color: #f50057;
+                display: block;
+                font-size: .5rem;
+                width: 40%;
+                display: flex;
+                justify-content: center;
+                cursor: pointer;
+                align-items: center;
+                padding: 5px;
+                color: white;
+                margin-top: 2rem;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                transition: .5s linear;
+                text-decoration: none;
+                border-radius: 20px;
+
+                svg {
+                    font-size: .8rem;
+                }
+
+                @include breakpoint-down(medium) {
+                    width: 50%;
+                    margin-bottom: 1rem;
+                }
+
+
+                &:hover {
+                    background-color: #b92d5e;
+                    transform: scale(0.99);
+                    width: 60%;
+                    border-radius: 0px;
+                    color: rgb(235, 232, 232);
+
+                    @include breakpoint-down(medium) {
+                        width: 60%;
+
+                    }
+                }
+
+
+                h3 {
+                    letter-spacing: 5px;
+                    margin-left: 1rem;
+                }
+
+
+            }
+        }
+    }
+
+
+}

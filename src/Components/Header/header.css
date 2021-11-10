@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Neucha&display=swap");
+.header {
+  width: 100%;
+  cursor: pointer;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  text-transform: uppercase;
+  background-color: #39445a;
+  font-family: "Montserrat", sans-serif;
+  font-size: 4vw;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  box-shadow: 0px 1px 5px black;
+  color: white;
+  z-index: 100;
+}
+.header p {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  margin-left: 1rem;
+  transition: 0.5s ease-in-out;
+  padding: 3px;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.arrow {
+  animation-name: arrow;
+}
+.header p:hover {
+  background-color: rgba(199, 199, 199, 0.062);
+}
+.header p svg {
+  font-size: 2rem;
+}
+@keyframes arrow {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 1000px) {
+  .header {
+    font-size: 4vw;
+  }
+}

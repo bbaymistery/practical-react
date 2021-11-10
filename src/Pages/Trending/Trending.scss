@@ -1,0 +1,179 @@
+@import '../../global.scss';
+
+.body {
+    overflow: hidden;
+
+    &::-webkit-scrollbar {
+        //for chorem
+        display: none;
+    }
+}
+
+.content {
+    position: relative;
+    background-color: #39445a;
+    top: 100px;
+    height: auto;
+    padding-top: 120px;
+    padding-bottom: 150px;
+
+
+    // //part for discover movies
+    //     .types-of-movies {
+    //         background-color: red;
+    //     }
+
+
+    @include breakpoint-down(medium) {
+        top: 60px;
+    }
+
+    .text-center {
+        font-size: 2rem;
+        color: bisque;
+        letter-spacing: 5px;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    &-card-sections {
+        display: flex;
+        flex-direction: column;
+        padding-top: 20px;
+
+        .cards {
+            display: grid;
+            grid-gap: 1rem;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+
+            @include breakpoint-down(medium) {
+                grid-template-columns: 1fr 1fr;
+                // display: none;
+            }
+
+            @include breakpoint-down(small) {
+                grid-template-columns: 1fr;
+                // background-color: blue;
+            }
+
+            //css code  which belong for each card transfered to single content which contains each card
+            /*
+            .card {
+                justify-self: center;
+                text-align: center;
+                width: 250px;
+                height: 410px;
+                // border: 2px solid rgb(216, 10, 10);
+                position: relative;
+                padding: 10px;
+                background-color: #282c34;
+                transition: 0.5s ease-in-out;
+
+                @include breakpoint-down(medium) {
+                    width: 300px;
+                    height: 450px;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: rgb(15, 10, 6);
+                    color: black;
+                    transform: scale(1.1);
+
+                }
+
+                img {
+
+                    border-radius: 20px;
+                    height: 80%;
+                    object-fit: cover;
+                    width: 100%;
+                    display: block;
+                }
+
+                .card-body {
+
+                    h3 {
+                        padding: 5px 0px;
+                        color: white;
+                    }
+
+                    .score {
+                        position: absolute;
+                        color: rgb(219, 219, 255);
+                        font-size: 1.1rem;
+                        background-color: rgb(56, 56, 255) !important;
+                        font-weight: bold;
+                        border-radius: 20px;
+                        padding: 2px 5px;
+                        top: -15px;
+                        right: -15px;
+
+                    }
+
+                    .desc {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top: 1rem;
+                        color: wheat;
+                        font-weight: normal;
+                    }
+                }
+            }
+            */
+
+
+        }
+
+
+    }
+
+
+
+}
+
+
+//we have two paginations first i created by my own ,other one which i created by material icons(customPagination)
+/*
+  .pagination {
+      text-align: center;
+      margin-top: 2rem;
+
+      ul {
+          background-color: #39445a;
+
+          display: inline-block;
+          padding: 10px;
+          width: auto;
+          align-items: center;
+
+          li {
+              // color: white;
+              cursor: pointer;
+              padding: 5px 15px;
+              border-radius: 20px;
+              margin-right: .5rem;
+              display: inline-block;
+              transition: 0.5s ease-out;
+          }
+
+          li:hover {
+              background-color: #101218;
+              color: honeydew;
+          }
+
+          li.active {
+              color: white;
+              background-color: rgb(42, 54, 165);
+              cursor: pointer;
+          }
+
+
+          li.active:hover {
+              background-color: rgb(33, 50, 197);
+
+          }
+      }
+
+  }
+*/
