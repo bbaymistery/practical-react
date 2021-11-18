@@ -1,1 +1,0 @@
-burasi yeniden temizlendi

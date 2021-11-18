@@ -1,25 +1,3 @@
-kulladigim paketler
-
-
-*npm install @material-ui/lab
-*npm install @material-ui/core
-*fontawesome(embedded to index.html)
-*axios
-*npm i react-responsive-carousel
-*npm install @material-ui/icons
-*npm i react-alice-carousel
-*npm install aos --save
-*npm i node-scss
-
-Sitenin cogu hissesi material ui icon ile yapildi Sadece bazi kisimlari elimle yazdm mesela pagination kismi Trending sayfasindaki el ile yazilirken diger sayfalarda material ui kullanilmisdir.
-
-
-
-Hocam nacizane olarak shunu hatrlatmak isterim
-Ben bu proje uzerinde yaklasik 5 6 gunE calisdim
-Sizin ilani 2 gun kala gordum yani aslinda bu projeyi yapmisdim Sadece
- guncelleyib kod okunurlugunu ve responsive yapisini ayarlayib size gonderiyorum...
-
-
-
-Tesekkurler...
+npm install --save react-chartjs-2 chart.js
+npm install react-html-parser
+npm install --save aos@next
