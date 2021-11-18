@@ -1,0 +1,13 @@
+body {
+  background-color: #14161a;
+  color: white;
+}
+a {
+  /* list-style: none;
+  */
+  text-decoration: none;
+  color: yellow;
+  /* font-weight: 500;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  letter-spacing: 3px; */
+}
