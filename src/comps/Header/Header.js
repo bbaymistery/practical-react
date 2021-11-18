@@ -17,6 +17,7 @@ import RightSideBar from "../RightSideBar/RightSideBar";
 const useStyles = makeStyles((theme) => ({
   container: {},
   toolbar: {
+    minWidth: "100%",
     alignItems: "center",
     display: "flex",
     justifyContent: "space-between",
@@ -51,7 +52,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   currency: {
-    width: " 12vh",
+    backgroundColor: "black",
+    minWidth: " 12vh",
     height: "5.1vh",
     marginLeft: "15px",
     color: "white",
@@ -105,7 +107,6 @@ const Header = () => {
               <MenuItem value={"RUB"}>RUB</MenuItem>
             </Select>
             <RightSideBar>
-              <div className={classes.button}></div>
               <Badge />
             </RightSideBar>
           </div>

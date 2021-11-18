@@ -19,7 +19,7 @@ const AppProvider = ({ children }) => {
     if (currency === "USD") {
       setSymbol("$");
     } else if (currency === "RUB") {
-      setSymbol("₽");
+      setSymbol("R");
     }
   }, [currency]);
 
@@ -34,7 +34,7 @@ const AppProvider = ({ children }) => {
       });
       setTimeout(() => {
         setAlert({ ...alert, msg: "", open: false });
-      }, 1500);
+      }, 2500);
     }
   };
   //add ve remove seklinde ayaralamalar
@@ -49,7 +49,7 @@ const AppProvider = ({ children }) => {
       });
       setTimeout(() => {
         setAlert({ ...alert, msg: "", open: false });
-      }, 1500);
+      }, 2500);
     }
   };
 

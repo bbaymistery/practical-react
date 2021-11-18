@@ -14,37 +14,38 @@ import { Typography, Container } from "@mui/material";
 import Button from "@mui/material/Button";
 import { useGlobalContext } from "../../context";
 import { numberWithCommas } from "../numberWithCommas";
+import { Avatar } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   box: {
     backgroundColor: "#171717",
     color: "#f5faf5",
-    width: "350px",
+    minWidth: "330px",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
     height: "100%",
   },
-  image: {
-    width: "150px",
-    borderRadius: "50%",
-  },
+  // image: {
+  //   width: "150px !important",
+  //   borderRadius: "50%",
+  // },
   title: {
     fontSize: "2.5rem",
     padding: "1.5rem 0rem",
   },
-  container: {
-    border: "1px solid gray",
-    height: "50%",
-    textAlign: "center",
-    overflowY: "scroll",
-    borderTopLeftRadius: "30px",
-    borderBottomLeftRadius: "30px",
-    display: "flex",
-    alignItems: "center",
-    flexDirection: "column",
-    justifyContent: "center",
-  },
+  // container: {
+  //   border: "1px solid gray",
+  //   height: "50%",
+  //   textAlign: "center",
+  //   overflowY: "scroll",
+  //   borderTopLeftRadius: "30px !important",
+  //   borderBottomLeftRadius: "30px !important",
+  //   display: "flex",
+  //   alignItems: "center",
+  //   flexDirection: "column",
+  //   justifyContent: "center",
+  // },
   containerTitle: {
     color: "whiteSmoke",
     paddingTop: "1rem",
@@ -58,6 +59,7 @@ const useStyles = makeStyles((theme) => ({
   },
   price: {
     color: "black !important",
+    margin: "0rem 2rem",
   },
   listItem: {
     padding: "1rem",
@@ -99,16 +101,36 @@ export default function TemporaryDrawer({ children }) {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <img src={Ben} alt={"Elgun"} className={classes.image} />
+      <img
+        style={{ maxWidth: "130px", borderRadius: "50%" }}
+        src={Ben}
+        alt={"Elgun"}
+      />
       <Typography
         className={classes.title}
-        style={{ fontFamily: "cursive", color: "yellow" }}
+        style={{
+          fontFamily: "cursive",
+          color: "yellow",
+          textAlign: "center",
+          // border: "1px solid red",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "100%",
+        }}
       >
         Elgun Mr.$ Ezmemmedov
       </Typography>
       <Divider />
       {/* listeler  */}
-      <Container className={classes.container}>
+      <Container
+        style={{
+          border: "1px solid gray",
+          height: "50%",
+          textAlign: "center",
+          overflowY: "scroll",
+        }}
+      >
         {/* baslik yazisi liste icin */}
         {watchListDatas.length > 0 ? (
           <Typography variant="subtitle1" className={classes.containerTitle}>
@@ -120,7 +142,15 @@ export default function TemporaryDrawer({ children }) {
           {watchListDatas?.length > 0 ? (
             watchListDatas?.map((value) => (
               <ListItem
-                className={classes.listItem}
+                style={{
+                  padding: "1rem",
+                  margin: "1rem 0px",
+                  borderRadius: "20px",
+                  backgroundColor: "gold",
+                  display: "flex",
+                  justifyContent: "space-between",
+                  alignItems: "center",
+                }}
                 key={value.name}
                 disableGutters
                 secondaryAction={
@@ -129,11 +159,7 @@ export default function TemporaryDrawer({ children }) {
                   </IconButton>
                 }
               >
-                <ListItemText
-                  style={{ color: "black" }}
-                  primary={` ${value.name}`}
-                  key={value.name}
-                />
+                <span style={{ color: "black" }}>{value.name}</span>
                 <span className={classes.price}>
                   {symbol + " "}
                   {/* {value.price}$ */}
