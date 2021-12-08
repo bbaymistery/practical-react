@@ -1,0 +1,53 @@
+@import '../../global.scss'
+;
+
+
+.section {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .left {
+
+        p {
+            max-width: 600px;
+            display: flex;
+            padding: 1rem 0rem;
+            word-break: break-word;
+        }
+
+
+    }
+
+    .right {
+        display: block;
+        position: relative;
+
+        .small {
+            position: absolute;
+            bottom: 0;
+            left: -30%;
+
+            img {
+                border-radius: 20px;
+                width: 250px;
+            }
+        }
+
+        .big {
+            img {
+                width: 450px;
+                object-fit: contain;
+                border-radius: 20px;
+
+            }
+        }
+
+        // // max 1380 pxve asagisi oldumu gorsenecek
+        @include breakpoint-down(medium) {
+            display: none;
+
+        }
+    }
+}
