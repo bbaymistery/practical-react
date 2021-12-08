@@ -1,0 +1,14 @@
+FeaturProducts>Product     > yani tekce product olan featured icin olan productdir.
+Featured a tiklayinca icndeki product componentiyle ProductDetaile yonlendirilir
+Product detail de ContextProduct ile yapldi
+
+ProductsList e ise All products seklinde gelen veriler filterContextden gelir
+
+
+
+
+
+
+>demeli verileri ikidene bazada tuturug bir all products var birde sorted products eger guery true dusa sorted gorsener degilse allproducts
+
+//ikidene bazada tuturug ege r guery varsa sorted olanlar gorsenir yoxdusa normal olanlar

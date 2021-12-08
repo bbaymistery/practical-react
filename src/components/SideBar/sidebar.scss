@@ -1,0 +1,127 @@
+@import '../../global.scss';
+
+.sidebar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgb(255, 255, 255);
+    padding-top: 2rem;
+    z-index: 100;
+    transform: translateX(-100%);
+    transition: all 0.4s ease-in-out;
+    display: none;
+
+    &.open {
+        transform: translateX(0%) !important;
+    }
+
+    // max 1380 pxve asagisi oldumu gorsenecek
+    @include breakpoint-down(large) {
+        display: block;
+    }
+
+    &_nav {
+        display: flex;
+        width: 90vw;
+        margin: 0px auto;
+        max-width: var(--max-width);
+        // border: 1px solid red;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+            box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+
+            img {
+                width: 175px;
+            }
+        }
+
+        .closebtn {
+            .icon {
+                font-size: 2rem;
+                background: transparent;
+                border-color: transparent;
+                transition: var(--transition);
+                cursor: pointer;
+                color: var(--clr-red-dark);
+                margin-top: 0.2rem;
+                font-weight: bold;
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+
+    }
+
+    &_list {
+        margin-top: 1.5rem;
+
+        .list {
+
+            li {
+                cursor: pointer;
+                transition: all ease 0.6s;
+                padding: 16px 32px;
+
+                &:hover {
+                    background-color: var(--clr-grey-9);
+                    padding: 16px 38px;
+                    letter-spacing: 2.5px;
+                }
+
+                a {}
+            }
+        }
+    }
+
+    &_icons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 1rem;
+
+
+        .shopcart_container {
+            display: flex;
+            // border: 1px solid green;
+            align-items: center;
+            position: relative;
+            font-size: 1.5rem;
+            cursor: pointer;
+            margin-left: 3rem;
+
+            .icon {
+                margin-left: .6rem;
+            }
+
+            .value {
+                position: absolute;
+                top: -10%;
+                right: -19%;
+                background-color: var(--clr-primary-5);
+                padding: 1px 6px;
+                font-size: 15px;
+                border-radius: 20px;
+                color: white;
+                font-weight: bold;
+            }
+        }
+
+        .user_container {
+            display: flex;
+            align-items: center;
+            font-size: 1.5rem;
+            cursor: pointer;
+            margin-left: 3rem;
+
+            .icon {
+                margin-left: .6rem;
+            }
+        }
+    }
+}
